@@ -1,7 +1,7 @@
 import React from "react";
 import FriendList from "./components/FriendList";
 import { friends } from "./components/Birthdays";
-import castle from "./images/castle-birthdays.jpg";
+import castle from "../src/images/castle-birthdays.jpg";
 
 function App() {
   return (
