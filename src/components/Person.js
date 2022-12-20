@@ -6,7 +6,10 @@ function Person({ fullName, birthdayDate, id, imgURL }) {
     <div className="person">
       <div className="person-info">
         <h5>{fullName}</h5>
-        <p>{`${daysLeft} days left until birthday (${birthdayDate})`}</p>
+        <p>{`${daysLeft} days left until birthday (${birthdayDate
+          .split("-")
+          .slice(1)
+          .join("-")})`}</p>
       </div>
       {imgURL && <img src={imgURL} alt={fullName} />}
     </div>
