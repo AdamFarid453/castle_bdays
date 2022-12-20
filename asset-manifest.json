@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.188b0a57.css",
+    "main.js": "/react-gh-pages/static/js/main.218a4b6c.js",
+    "static/js/787.11a98e61.chunk.js": "/react-gh-pages/static/js/787.11a98e61.chunk.js",
+    "static/media/castle-birthdays.jpg": "/react-gh-pages/static/media/castle-birthdays.8a3986e16a58eb8b1ce8.jpg",
+    "index.html": "/react-gh-pages/index.html",
+    "main.188b0a57.css.map": "/react-gh-pages/static/css/main.188b0a57.css.map",
+    "main.218a4b6c.js.map": "/react-gh-pages/static/js/main.218a4b6c.js.map",
+    "787.11a98e61.chunk.js.map": "/react-gh-pages/static/js/787.11a98e61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.188b0a57.css",
+    "static/js/main.218a4b6c.js"
+  ]
+}
