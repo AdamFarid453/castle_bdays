@@ -11,6 +11,9 @@
 # production
 /build
 
+# birthday info
+/src/components/Birthdays.js
+
 # misc
 .DS_Store
 .env.local
