@@ -26,6 +26,7 @@ function daysLeftToBd(birthday) {
   // convert the difference in days
   const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
   //return the rounded difference
+
   return Math.round(Math.abs(diffInDays));
 }
 
