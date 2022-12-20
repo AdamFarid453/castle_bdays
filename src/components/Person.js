@@ -17,10 +17,15 @@ function Person({ fullName, birthdayDate, id, imgURL }) {
 }
 
 function daysLeftToBd(birthday) {
+  // grab the current day
   const today = new Date();
-  const birthDate = new Date(Date.parse(birthday));
+  // parse the dates in Birthday.js and add a day to offset the time difference
+  const birthDate = new Date(Date.parse(birthday) + 3600 * 1000 * 24);
+  // calculate the difference in days
   const diffInMs = new Date(birthDate) - new Date(today);
+  // convert the difference in days
   const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+  //return the rounded difference
   return Math.round(Math.abs(diffInDays));
 }
 
