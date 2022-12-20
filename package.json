@@ -1,7 +1,7 @@
 {
   "name": "chat-gpt",
   "version": "0.1.0",
-  "homepage": "https://adamfarid453.github.io/react-gh-pages/",
+  "homepage": "http://adamfarid453.github.io/react-gh-pages/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
