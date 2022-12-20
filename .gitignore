@@ -12,7 +12,7 @@
 /build
 
 # birthday info
-# /src/components/Birthdays.js
+/src/components/Birthdays.js
 
 # misc
 .DS_Store
