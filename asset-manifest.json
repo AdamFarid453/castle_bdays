@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.188b0a57.css",
-    "main.js": "/static/js/main.e21a2ad8.js",
-    "static/js/787.11a98e61.chunk.js": "/static/js/787.11a98e61.chunk.js",
-    "static/media/castle-birthdays.jpg": "/static/media/castle-birthdays.8a3986e16a58eb8b1ce8.jpg",
-    "index.html": "/index.html",
-    "main.188b0a57.css.map": "/static/css/main.188b0a57.css.map",
-    "main.e21a2ad8.js.map": "/static/js/main.e21a2ad8.js.map",
-    "787.11a98e61.chunk.js.map": "/static/js/787.11a98e61.chunk.js.map"
+    "main.css": "/castle_bdays/static/css/main.188b0a57.css",
+    "main.js": "/castle_bdays/static/js/main.6de0e9b2.js",
+    "static/js/787.11a98e61.chunk.js": "/castle_bdays/static/js/787.11a98e61.chunk.js",
+    "static/media/castle-birthdays.jpg": "/castle_bdays/static/media/castle-birthdays.8a3986e16a58eb8b1ce8.jpg",
+    "index.html": "/castle_bdays/index.html",
+    "main.188b0a57.css.map": "/castle_bdays/static/css/main.188b0a57.css.map",
+    "main.6de0e9b2.js.map": "/castle_bdays/static/js/main.6de0e9b2.js.map",
+    "787.11a98e61.chunk.js.map": "/castle_bdays/static/js/787.11a98e61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.188b0a57.css",
-    "static/js/main.e21a2ad8.js"
+    "static/js/main.6de0e9b2.js"
   ]
 }
