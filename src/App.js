@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <div>
+        <title>Castle Birthday's</title>
         <img src={castle} alt="" className="responsive"></img>
         <h1>Castle Birthdays 🥳</h1>
         <FriendList friends={friends} />
