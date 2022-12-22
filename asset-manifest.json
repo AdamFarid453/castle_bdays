@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.188b0a57.css",
-    "main.js": "/static/js/main.56eb7b81.js",
+    "main.js": "/static/js/main.93ed6f96.js",
     "static/js/787.11a98e61.chunk.js": "/static/js/787.11a98e61.chunk.js",
     "static/media/castle-birthdays.jpg": "/static/media/castle-birthdays.8a3986e16a58eb8b1ce8.jpg",
     "index.html": "/index.html",
     "main.188b0a57.css.map": "/static/css/main.188b0a57.css.map",
-    "main.56eb7b81.js.map": "/static/js/main.56eb7b81.js.map",
+    "main.93ed6f96.js.map": "/static/js/main.93ed6f96.js.map",
     "787.11a98e61.chunk.js.map": "/static/js/787.11a98e61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.188b0a57.css",
-    "static/js/main.56eb7b81.js"
+    "static/js/main.93ed6f96.js"
   ]
 }
