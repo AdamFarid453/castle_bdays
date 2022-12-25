@@ -11,9 +11,11 @@ function FriendList(props) {
   const bdSoon = friends.filter(isBdSoon);
   const bdThreeMonth = friends.filter(isBdThreeMonthsAway);
   const bdLater = friends.filter(isBdLater);
+  const bdToday = friends.filter(isBdToday);
 
   return (
     <div className="friend-list">
+      {bdToday.length > 0 ? <BdToday list={bdToday} /> : null}
       {bdSoon.length > 0 ? <BdSoon list={bdSoon} /> : null}
       {bdThreeMonth.length > 0 ? <BdThreeMounth list={bdThreeMonth} /> : null}
       {bdLater.length > 0 ? <BdLately list={bdLater} /> : null}
@@ -23,15 +25,17 @@ function FriendList(props) {
 
 function daysLeftToBd(person) {
   const today = new Date();
-  const birthDate = new Date(Date.parse(person.birthdayDate));
-  birthDate.setFullYear(today.getFullYear() + 1);
-  const daysLeft = Math.floor(
-    ((birthDate.getTime() - today.getTime()) / (60 * 60 * 24 * 1000)) % 365
+  const birthDate = new Date(
+    Date.parse(person.birthdayDate) + 3600 * 1000 * 24
   );
-  return daysLeft;
+  const diffInMs = new Date(birthDate) - new Date(today);
+  // convert the difference in days
+  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+  //return the rounded difference
+  return Math.round(Math.abs(diffInDays));
 }
 function isBdSoon(person) {
-  return daysLeftToBd(person) <= 30;
+  return daysLeftToBd(person) <= 30 && daysLeftToBd(person) > 0;
 }
 
 function isBdThreeMonthsAway(person) {
@@ -40,6 +44,34 @@ function isBdThreeMonthsAway(person) {
 
 function isBdLater(person) {
   return daysLeftToBd(person) > 90;
+}
+
+function isBdToday(person) {
+  return daysLeftToBd(person) === 0;
+}
+
+//BdayToday component
+function BdToday({ list }) {
+  return (
+    <div>
+      <div>
+        <h4 style={{ marginBottom: 10 }}>Birthdays Today! 🎉</h4>
+        <hr />
+        <div>
+          {list.map((person) => (
+            <React.Fragment key={person.id}>
+              <Person
+                fullName={person.name}
+                birthdayDate={person.birthdayDate}
+                id={person.id}
+                imgURL={person.imgURL}
+              />
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // BdSoon component
