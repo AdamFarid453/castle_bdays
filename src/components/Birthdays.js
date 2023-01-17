@@ -8,13 +8,13 @@ export const friends = [
   },
   {
     name: "Quinn",
-    birthdayDate: "2023-01-01",
+    birthdayDate: "2024-01-01",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
   {
     name: "Ankita",
-    birthdayDate: "2023-01-04",
+    birthdayDate: "2024-01-04",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
