@@ -20,19 +20,19 @@ export const friends = [
   },
   {
     name: "Nick",
-    birthdayDate: "2023-02-06",
+    birthdayDate: "2024-02-06",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
   {
     name: "Phil",
-    birthdayDate: "2023-03-05",
+    birthdayDate: "2024-03-05",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
-   {
+  {
     name: "Valentina",
-    birthdayDate: "2023-03-10",
+    birthdayDate: "2024-03-10",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
