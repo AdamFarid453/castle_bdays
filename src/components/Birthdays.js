@@ -38,13 +38,13 @@ export const friends = [
   },
   {
     name: "Jenna",
-    birthdayDate: "2023-06-06",
+    birthdayDate: "2024-06-06",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
   {
     name: "Kush",
-    birthdayDate: "2023-06-15",
+    birthdayDate: "2024-06-15",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
