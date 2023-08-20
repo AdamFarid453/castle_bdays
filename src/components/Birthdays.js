@@ -68,13 +68,13 @@ export const friends = [
   },
   {
     name: "Danny",
-    birthdayDate: "2023-08-16",
+    birthdayDate: "2024-08-16",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
   {
     name: "Jaimie",
-    birthdayDate: "2023-08-19",
+    birthdayDate: "2024-08-19",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
