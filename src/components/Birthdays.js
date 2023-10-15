@@ -80,7 +80,7 @@ export const friends = [
   },
   {
     name: "Fab",
-    birthdayDate: "2023-08-31",
+    birthdayDate: "2024-08-31",
     id: Math.floor(Math.random() * 1000),
     imgURL: "",
   },
