@@ -1,15 +1,19 @@
 import React from "react";
 
-function Person({ fullName, birthdayDate, id, imgURL }) {
+function Person({ fullName, birthdayDate, id, imgURL, isToday }) {
   const daysLeft = daysLeftToBd(birthdayDate);
   return (
     <div className="person">
       <div className="person-info">
         <h5>{fullName}</h5>
-        <p>{`${daysLeft} days left until birthday (${birthdayDate
-          .split("-")
-          .slice(1)
-          .join("-")})`}</p>
+        <p>
+          {isToday
+            ? "Happy Birthday! 🎂🎉"
+            : `${daysLeft} days left until birthday (${birthdayDate
+                .split("-")
+                .slice(1)
+                .join("-")})`}
+        </p>
       </div>
       {imgURL && <img src={imgURL} alt={fullName} />}
     </div>
@@ -17,16 +21,32 @@ function Person({ fullName, birthdayDate, id, imgURL }) {
 }
 
 function daysLeftToBd(birthday) {
-  // grab the current day
   const today = new Date();
-  // parse the dates in Birthday.js and add a day to offset the time difference
-  const birthDate = new Date(Date.parse(birthday) + 3600 * 1000 * 24);
-  // calculate the difference in days
-  const diffInMs = new Date(birthDate) - new Date(today);
-  // convert the difference in days
-  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
-  //return the rounded difference
-  return Math.round(Math.abs(diffInDays));
+  const currentYear = today.getFullYear();
+  let birthDate = new Date(birthday);
+  birthDate.setFullYear(currentYear);
+
+  // Calculate time difference in milliseconds
+  const timeDiff = birthDate.getTime() - today.getTime();
+  const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+  // Handle birthdays today
+  if (
+    daysLeft === 0 &&
+    birthDate.getDate() === today.getDate() &&
+    birthDate.getMonth() === today.getMonth()
+  ) {
+    return 0;
+  }
+
+  // If the birthday has already occurred this year, calculate for the next year
+  if (daysLeft < 0) {
+    birthDate.setFullYear(currentYear + 1);
+    const nextYearTimeDiff = birthDate.getTime() - today.getTime();
+    return Math.ceil(nextYearTimeDiff / (1000 * 60 * 60 * 24));
+  }
+
+  return daysLeft;
 }
 
 export default Person;
