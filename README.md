@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Friends Birthday Reminder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application to keep track of your friends' birthdays. The app categorizes upcoming birthdays into different time frames and displays a special message for birthdays that fall on the current day.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Components](#components)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Displays friends' birthdays sorted by the number of days left.
+- Categorizes birthdays into four categories:
+  - **Birthdays Today** 🎉
+  - **In 30 Days** 👀
+  - **In 3 Months**
+  - **Later**
+- Special message for birthdays falling on the current day.
+- Dynamically updates and sorts the list of friends based on their birthdays.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Components
 
-### `npm test`
+### Birthdays.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contains the list of friends with their names, birthdays, unique IDs, and image URLs.
 
-### `npm run build`
+```js
+export const friends = [
+  // Sample data
+  {
+    name: "Aimee",
+    birthdayDate: "2023-12-27",
+    id: Math.floor(Math.random() * 1000),
+    imgURL: "",
+  },
+  // More friends
+];
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### FriendList.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Handles the logic for sorting and categorizing friends based on their birthdays. Also contains helper functions for calculating the number of days left until a friend's birthday.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Person.js
 
-### `npm run eject`
+Displays individual friend's details and calculates the days left until their birthday. Shows a special message if the birthday is today.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Helper Functions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+daysLeftToBd: Calculates the number of days left until the next birthday.
+isBdSoon, isBdThreeMonthsAway, isBdLater, isBdToday: Helper functions to categorize friends based on their upcoming birthdays.
